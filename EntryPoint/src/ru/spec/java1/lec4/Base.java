@@ -4,11 +4,18 @@ public class Base {
 	
 	String name = "123";	
 	
+	int age = 1;
+	
 	public Base() {
 		super();
 		//init fields
 		System.out.println("Base() name=" + name);
-		m();
+//		m();
+	}
+	
+	public Base(String name) {
+		this();
+		this.name = name;
 	}
 	
 
@@ -23,8 +30,10 @@ public class Base {
 	}
 
 	public static void main(String[] args) {
-		new Ext().m();
+		Ext ext2 = new Ext2();
 		
+		System.out.println(ext2.age);
+		ext2.m();
 	}
 
 }
